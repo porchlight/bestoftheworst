@@ -31,8 +31,8 @@ content:
         type: string
       - name: tags
         type: select
-        multiple: true
         options:
+          multiple: true
           values:
             - name: beer
               label: beer
