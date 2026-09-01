@@ -33,7 +33,19 @@ content:
         type: select
         multiple: true
         options:
-          values: [beer, food, music, movies, sports, other]
+          values:
+            - name: beer
+              label: beer
+            - name: food
+              label: food
+            - name: music
+              label: music
+            - name: movies
+              label: movies
+            - name: sports
+              label: sports
+            - name: other
+              label: other
       - name: body
         type: rich-text
         required: true
