@@ -1,0 +1,49 @@
+media:
+  input: docs/images
+  output: /images
+  categories: [image]
+  rename: safe
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: docs/posts
+    format: yaml-frontmatter
+    exclude:
+      - item.ejs
+    filename: "{title}.md"
+    view:
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        type: string
+        required: true
+      - name: date
+        type: date
+        required: true
+        options:
+          time: true
+          format: "MMMM d, yyyy h:mm a"
+      - name: author
+        type: string
+      - name: tags
+        type: select
+        multiple: true
+        options:
+          values: [beer, food, music, movies, sports, other]
+      - name: body
+        type: rich-text
+        required: true
+
+actions:
+  - name: deploy-site
+    label: Deploy site
+    workflow: build-site.yml
+    ref: current
+    confirm:
+      title: Deploy site?
+      message: This will rebuild the site with tinyjam and deploy it from the current branch.
+      button: Deploy

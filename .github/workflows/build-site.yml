@@ -1,0 +1,55 @@
+name: Build site
+
+on:
+  workflow_dispatch:
+    inputs:
+      payload:
+        description: Pages CMS payload as JSON
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages-cms-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Parse payload
+        id: payload
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const payload = JSON.parse(core.getInput('payload'));
+            const ref = payload.repository?.ref || 'main';
+            core.setOutput('ref', ref);
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.payload.outputs.ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build site
+        run: npx tinyjam docs
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && exit 0
+          git commit -m "build: rebuild site (via Pages CMS)"
+          git push origin "HEAD:${{ steps.payload.outputs.ref }}"
