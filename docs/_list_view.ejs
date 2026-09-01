@@ -7,7 +7,7 @@
             <span><%= author %></span><span class="seperator">|</span>
             <% if (tags) { %>
                     <ul><% for(var i=0; i<tags.length; i++) {%>
-                        <li><a class="tag-select" href="/<%= tags[i] %>.html"><%= tags[i] %></a></li>
+                        <li><a class="tag-select" href="<%= rootPath %>/<%= tags[i] %>.html"><%= tags[i] %></a></li>
                     <% } %></ul>
             <% } %>
             <span class="seperator">|</span>

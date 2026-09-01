@@ -5,4 +5,4 @@ author: travis
 tags:
   - music
 ---
-I don't want to pay for the nosebleeds.ca domain anymore and it's expiring in a day or two, update your bookmarks to https://nosebleeds.netlify.app/ to keep following
+I don't want to pay for the nosebleeds.ca domain anymore and it's expiring in a day or two, update your bookmarks to https://porchlight.github.io/nosebleeds to keep following

@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>
-    <% if (typeof title != 'undefined') { %>
-        <%= title %> | <%= root.data.title %>
-    <% } else { %>
-        Home | <%= root.data.title %>
-    <% } %>
-</title>
-<meta charset="utf-8">
-<meta name="description" content="<%= root.data.title %>">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" type="image/jpg" href="/favicon.png"/>
-<!-- Embed Font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito&family=Palette+Mosaic&family=Rock+3D&&display=swap" rel="stylesheet">
+    <title>
+        <% if (typeof title !='undefined' ) { %>
+            <%= title %> | <%= root.data.title %>
+                    <% } else { %>
+                        Home | <%= root.data.title %>
+                            <% } %>
+    </title>
+    <meta charset="utf-8">
+    <meta name="description" content="<%= root.data.title %>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="<%= rootPath %>/favicon.png" />
+    <!-- Embed Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Palette+Mosaic&family=Rock+3D&&display=swap"
+        rel="stylesheet">
 
-<!-- CSS Reset -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
 
-<!-- Milligram CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-<link rel="stylesheet" href="<%= rootPath %>/index.css">
-<script src="<%= rootPath %>/script.js"></script>
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+    <link rel="stylesheet" href="<%= rootPath %>/index.css">
+    <script src="<%= rootPath %>/script.js"></script>
 
-<link rel="alternate" type="application/rss+xml" href="rss.xml" title="<%= rootPath %>/<%= root.data.title %> RSS">
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ3HKYN8XV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="alternate" type="application/rss+xml" href="rss.xml" title="<%= rootPath %>/<%= root.data.title %> RSS">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ3HKYN8XV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-VQ3HKYN8XV');
-</script>
+        gtag('config', 'G-VQ3HKYN8XV');
+    </script>
 </head>
+
 <body>
-<nav class="responsive" id="responsive-menu">
-    <a href="/">Home</a>
-    <a href="/archive.html">Archive</a>
-    <a href="/suggest.html">Make a suggestion</a>
-	<button class="menu-toggle">...</button>
-</nav>
-<main class="wrapper">
-<section class="container">
-<div class="row">
-    <div class="column"><h1><a href="/">nosebleeds</a></h1></div>
-</div>
+    <nav class="responsive" id="responsive-menu">
+        <a href="<%= rootPath %>/">Home</a>
+        <a href="<%= rootPath %>/archive.html">Archive</a>
+        <a href="<%= rootPath %>/suggest.html">Make a suggestion</a>
+        <button class="menu-toggle">...</button>
+    </nav>
+    <main class="wrapper">
+        <section class="container">
+            <div class="row">
+                <div class="column">
+                    <h1><a href="<%= rootPath %>/">nosebleeds</a></h1>
+                </div>
+            </div>
