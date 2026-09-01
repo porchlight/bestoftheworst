@@ -24,7 +24,9 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const payload = JSON.parse(core.getInput('payload'));
+            const raw = github.context.payload.inputs?.payload;
+            if (!raw) throw new Error('Missing "payload" workflow_dispatch input');
+            const payload = JSON.parse(raw);
             const ref = payload.repository?.ref || 'main';
             core.setOutput('ref', ref);
 
