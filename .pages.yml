@@ -32,6 +32,7 @@ content:
       - name: tags
         type: select
         options:
+          multiple: true
           values:
             - beer
             - food
