@@ -32,7 +32,6 @@ content:
       - name: tags
         type: select
         options:
-          multiple: true
           values:
             - name: beer
               label: beer
