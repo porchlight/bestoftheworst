@@ -8,6 +8,12 @@
 <atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
 
    <item>
+     <title>OSSX - Making a mess EP</title>
+     <link>/posts/ossx-making-a-mess-ep.html</link>
+     <guid>/posts/ossx-making-a-mess-ep.html</guid>
+     <description><![CDATA[<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=696149317/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://ossx.bandcamp.com/album/making-a-mess-ep">MAKING A MESS EP by OSSX</a></iframe>]]></description>
+</item>
+<item>
      <title>Today I&apos;m listening to Gone By Now by Anytime Cowboy </title>
      <link>/posts/today-im-listening-to-gone-by-now-by-anytime-cowboy.html</link>
      <guid>/posts/today-im-listening-to-gone-by-now-by-anytime-cowboy.html</guid>
@@ -17,7 +23,7 @@
      <title>** SITE UPDATE **</title>
      <link>/posts/site-update.html</link>
      <guid>/posts/site-update.html</guid>
-     <description><![CDATA[<p>I don&#39;t want to pay for the nosebleeds.ca domain anymore and it&#39;s expiring in a day or two, update your bookmarks to <a href="https://porchlight.github.io/nosebleeds">https://porchlight.github.io/nosebleeds</a> to keep following</p>]]></description>
+     <description><![CDATA[<p>I don&#39;t want to pay for the nosebleeds.ca domain anymore and it&#39;s expiring in a day or two, update your bookmarks to <a href="https://porchlight.github.io/bestoftheworst">https://porchlight.github.io/bestoftheworst</a> to keep following</p>]]></description>
 </item>
 <item>
      <title>Today I&apos;m listening to:  GLITTERING INSECTS - S/T LP </title>
@@ -71,13 +77,6 @@
      <guid>/posts/friday-feels-dj-mix-live-keys-guitars-bass-by-j-chuquimia-crampton.html</guid>
      <description><![CDATA[<p>Not for everyone, but this is speaking to me.</p>
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1465476592&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>]]></description>
-</item>
-<item>
-     <title>Today I&apos;m listening to: Smirk - Material</title>
-     <link>/posts/today-im-listening-to-smirk-material.html</link>
-     <guid>/posts/today-im-listening-to-smirk-material.html</guid>
-     <description><![CDATA[<p>The first song is a crappy/different recording, so don&#39;t let that turn you off like it did me when I first listened to the album.</p>
-<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=2540603189/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://smirk1.bandcamp.com/album/material">Material by Smirk</a></iframe>]]></description>
 </item>
 
 </channel>
