@@ -8,6 +8,13 @@
 <atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
 
    <item>
+     <title>The Tubs - Hard Life LP</title>
+     <link>/posts/the-tubs-hard-life-lp.html</link>
+     <guid>/posts/the-tubs-hard-life-lp.html</guid>
+     <description><![CDATA[<p>oh shit@! new tubs!</p>
+<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=950467439/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="https://thetubs.bandcamp.com/album/hard-life">Hard Life by The Tubs</a></iframe>]]></description>
+</item>
+<item>
      <title>OSSX - Making a mess EP</title>
      <link>/posts/ossx-making-a-mess-ep.html</link>
      <guid>/posts/ossx-making-a-mess-ep.html</guid>
@@ -70,13 +77,6 @@
      <guid>/posts/friday-feels.html</guid>
      <description><![CDATA[<p>I can&#39;t wait to bump this on a hot day in the summer while drinking something crispy and watching a sprinkler do its thing.</p>
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1447882894&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>]]></description>
-</item>
-<item>
-     <title>Friday Feels: DJ Mix Live - keys | guitars &amp; bass by J Chuquimia Crampton</title>
-     <link>/posts/friday-feels-dj-mix-live-keys-guitars-bass-by-j-chuquimia-crampton.html</link>
-     <guid>/posts/friday-feels-dj-mix-live-keys-guitars-bass-by-j-chuquimia-crampton.html</guid>
-     <description><![CDATA[<p>Not for everyone, but this is speaking to me.</p>
-<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1465476592&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>]]></description>
 </item>
 
 </channel>
