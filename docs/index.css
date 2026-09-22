@@ -59,6 +59,32 @@ h1 a:hover {
 .taglist  .like {
     cursor: pointer;
 }
+/* NEW STAR BADGE */
+.new-star {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.7rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    z-index: 0;
+    vertical-align: middle;
+}
+.new-star::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff700;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    z-index: -1;
+}
 /* MENU */
 .row .column.menu {
     display: none;
