@@ -2,63 +2,83 @@ body {
     color: black;
     font-family: 'Nunito', sans-serif;
 }
+
 a {
     color: blue;
 }
+
 a:hover {
     text-decoration: underline;
     color: blue;
 }
+
 span .date {
     display: block;
     font-size: 1.6rem;
 }
+
 .wrapper {
     display: block;
     overflow: hidden;
     position: relative;
     width: 100%;
 }
+
 h1 {
     /*font-family: 'Palette Mosaic', cursive;*/
     font-family: 'Rock 3D', cursive;
+    margin-bottom: 6rem;
 }
+
 h1 a {
     color: black;
 }
+
 h1 a:hover {
     text-decoration: none;
     color: black;
 }
+
 .wrapper .container {
     background: white;
 }
-.wrapper > .container {
+
+.wrapper>.container {
     padding-bottom: 7.5rem;
-    padding-top: 7.5rem;
+    padding-top: 3.5rem;
 }
+
 .post-teaser {
     border-bottom: 1px black dashed;
 }
-.post-teaser, .post .taglist {
+
+.post-teaser,
+.post .taglist {
     padding: 1rem 0;
 }
-.post-teaser h3, .post h2 {
+
+.post-teaser h3,
+.post h2 {
     margin-bottom: 0;
 }
+
 .taglist ul {
     display: inline;
 }
+
 .taglist li {
     display: inline;
-    list-style: none;   
+    list-style: none;
 }
+
 .taglist .seperator {
     margin: 0.5rem;
 }
-.taglist  .like {
+
+.taglist .like {
     cursor: pointer;
 }
+
 /* NEW STAR BADGE */
 .new-star {
     position: relative;
@@ -74,6 +94,7 @@ h1 a:hover {
     z-index: 0;
     vertical-align: middle;
 }
+
 .new-star::before {
     position: absolute;
     content: "";
@@ -85,31 +106,37 @@ h1 a:hover {
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     z-index: -1;
 }
+
 /* MENU */
 .row .column.menu {
     display: none;
 }
+
 .row .column.menu nav {
     background: #fff700;
     padding: 1rem;
 }
+
 .row .column.menu ul {
     margin-bottom: 0;
 }
+
 .row .column.menu li {
     list-style: none;
     text-align: right;
 }
+
 .responsive {
     position: sticky;
     top: 0;
     z-index: 2000;
 }
+
 .responsive a {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 1rem 2rem;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
 }
 
 .responsive a {
@@ -155,7 +182,11 @@ h1 a:hover {
     max-width: 100%;
 }
 
-.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
     background-color: blue;
     border-color: blue;
 }
@@ -167,10 +198,12 @@ h1 a:hover {
 #suggestion-form textarea {
     height: 200px;
 }
+
 .disclaimer {
     background: lightcyan;
     border-color: black;
 }
+
 .required {
     color: red;
     margin: .25rem;
@@ -178,81 +211,88 @@ h1 a:hover {
 
 /* MEDIA QUERIES */
 /* Larger than mobile screen */
-@media (min-width: 640px) { 
+@media (min-width: 640px) {
     span .date {
         font-size: 2.8rem;
     }
+
     .row .column.menu {
         display: block;
     }
+
     .row .column.menu nav {
         position: sticky;
-        top: 200px;
+        top: 160px;
     }
+
     .responsive {
         display: none;
     }
-    
+
     .row .column.body {
         flex: 0 0 66.6666%;
         max-width: 66.6666%;
     }
+
     .wrapper {
         overflow: inherit;
     }
 }
 
 .iframe-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
 /* Then style the iframe to fit in the container div with full height and width */
 .iframe-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.archive-link {
+    padding-top: 1rem;
 }
 
 /* Larger than tablet screen */
-@media (min-width: 80.1rem) { 
-
-}
+@media (min-width: 80.1rem) {}
 
 /* Larger than desktop screen */
-@media (min-width: 120.1rem) {
-
-}
+@media (min-width: 120.1rem) {}
 
 /* BACKGROUND ACTION */
 .bg-0 {
-  background-image: linear-gradient(90deg, #fb94ff 25%, #fff700 25%, #fff700 50%, #fb94ff 50%, #fb94ff 75%, #fff700 75%, #fff700 100%);
-  background-size: 80.00px 80.00px;
+    background-image: linear-gradient(90deg, #fb94ff 25%, #fff700 25%, #fff700 50%, #fb94ff 50%, #fb94ff 75%, #fff700 75%, #fff700 100%);
+    background-size: 80.00px 80.00px;
 }
+
 .bg-1 {
-  background-color: #6495ED;
-  background-image: radial-gradient(circle, yellow 15%, transparent 10%), radial-gradient(circle, yellow 15%, transparent 10%);
-  background-size: 100px 100px;
-  background-position: 0 0, 50px 50px;
+    background-color: #6495ED;
+    background-image: radial-gradient(circle, yellow 15%, transparent 10%), radial-gradient(circle, yellow 15%, transparent 10%);
+    background-size: 100px 100px;
+    background-position: 0 0, 50px 50px;
 }
+
 .bg-2 {
-  background: linear-gradient(135deg, #00CED1 1%, #fff 1%, #fff 49%, #00CED1 49%, #00CED1 51%, #fff 51%, #fff 99%, #00CED1 99%);
-  background-size: 6px 6px;
-  background-position: 50px 50px;
+    background: linear-gradient(135deg, #00CED1 1%, #fff 1%, #fff 49%, #00CED1 49%, #00CED1 51%, #fff 51%, #fff 99%, #00CED1 99%);
+    background-size: 6px 6px;
+    background-position: 50px 50px;
 }
+
 .bg-3 {
-  background:url(
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAP0lEQVQoU42Q0QoAIAgDz///aMPAKKeQb26HTg0tB6zKVUhI4Bus5tMn2K4Djh7gBGXM7Uvo5riQ/BfUNwwTWfn+Cgg4zkoRAAAAAElFTkSuQmCC
-    ) repeat;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAP0lEQVQoU42Q0QoAIAgDz///aMPAKKeQb26HTg0tB6zKVUhI4Bus5tMn2K4Djh7gBGXM7Uvo5riQ/BfUNwwTWfn+Cgg4zkoRAAAAAElFTkSuQmCC
+) repeat;
 }
+
 .bg-4 {
-  background:url(
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAHElEQVQYV2M8c+bMfwYcgBEkaWJiwohNftBJAgDkoRtrmmfg/wAAAABJRU5ErkJggg==
-   ) repeat;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAHElEQVQYV2M8c+bMfwYcgBEkaWJiwohNftBJAgDkoRtrmmfg/wAAAABJRU5ErkJggg==
+) repeat;
 }

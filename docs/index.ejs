@@ -1,36 +1,41 @@
 <%- include('_header.ejs') -%>
-<div class="row">
-    <div class="column column-67 body">
-        <% const sortable = {};
-            for (const prop in posts) {
-                if (prop === 'root') {
-                    continue
-                }
-                const key = Date.parse(posts[prop].date);
-                posts[prop].slug = prop;
-                sortable[key] = posts[prop];
-            }
-        %>
-        <% for (const date of Object.keys(sortable).sort().reverse().slice(0, 20)) { const {name, title, body, author, tags, slug} = sortable[date]; -%>
-            <% const formatted_date = new Date(parseInt(date)); %>
-            <div class="post-teaser" data-date="<%= date %>">
-                <span class="title"><a href="posts/<%= slug %>.html"><%= title %></a></span>
-                 <div class="date"><%= formatted_date.toLocaleString('default', { year: 'numeric', month: 'long', day: 'numeric', hour12: true, hour: 'numeric', minute: '2-digit' }) %></div>
-                <div class="taglist">
-                    <span><%= author %></span><span class="seperator">|</span>
-                    <% if (tags) { %>
-                            <ul><% for(var i=0; i<tags.length; i++) {%>
-                                <li><a class="tag-select" href="<%= rootPath %>/<%= tags[i] %>.html"><%= tags[i] %></a></li>
-                            <% } %></ul>
-                    <% } %>
-                    <span class="seperator">|</span>
-                    <a href="posts/<%= slug %>.html#comments">comments</a>
-                </div>
-            </div>
-        <% } -%>
-        <p style="text-align: right;"><a href="<%= rootPath %>/archive.html">visit the archive for older posts</a></p>
+    <div class="row">
+        <div class="column column-67 body">
+            <% const sortable={}; for (const prop in posts) { if (prop==='root' ) { continue } const
+                key=Date.parse(posts[prop].date); posts[prop].slug=prop; sortable[key]=posts[prop]; } %>
+                <% for (const date of Object.keys(sortable).sort().reverse().slice(0, 20)) { const {name, title, body,
+                    author, tags, slug}=sortable[date]; -%>
+                    <% const formatted_date=new Date(parseInt(date)); %>
+                        <div class="post-teaser" data-date="<%= date %>">
+                            <span class="title"><a href="posts/<%= slug %>.html">
+                                    <%= title %>
+                                </a></span>
+                            <div class="date">
+                                <%= formatted_date.toLocaleString('default', { year: 'numeric' , month: 'long' ,
+                                    day: 'numeric' , hour12: true, hour: 'numeric' , minute: '2-digit' }) %>
+                            </div>
+                            <div class="taglist">
+                                <span>
+                                    <%= author %>
+                                </span><span class="seperator">|</span>
+                                <% if (tags) { %>
+                                    <ul>
+                                        <% for(var i=0; i<tags.length; i++) {%>
+                                            <li><a class="tag-select" href="<%= rootPath %>/<%= tags[i] %>.html">
+                                                    <%= tags[i] %>
+                                                </a></li>
+                                            <% } %>
+                                    </ul>
+                                    <% } %>
+                                        <span class="seperator">|</span>
+                                        <a href="posts/<%= slug %>.html#comments">comments</a>
+                            </div>
+                        </div>
+                        <% } -%>
+                            <p style="text-align: right; padding-top: 1rem;"><a
+                                    href="<%= rootPath %>/archive.html">visit the archive for older posts</a></p>
+        </div>
+        <%- include('_menu.ejs') -%>
     </div>
-    <%- include('_menu.ejs') -%>
-</div>
 
-<%- include('_footer.ejs') -%>
+    <%- include('_footer.ejs') -%>
