@@ -26,6 +26,48 @@ window.addEventListener('load', () => {
 	  	}
 	});
 
+	// NEW star badges (day-persistent, localStorage based)
+	var newStar = function () {
+		try {
+			var now = new Date();
+			var day = now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate();
+			var visitKey = 'botwLastVisit';
+			var dayKey = 'botwDay';
+
+			var lastVisit = localStorage.getItem(visitKey);
+			var lastDay = localStorage.getItem(dayKey);
+
+			if (lastVisit === null) {
+				// First visit ever: record the baseline, show no stars.
+				localStorage.setItem(visitKey, String(now.getTime()));
+				localStorage.setItem(dayKey, day);
+				return;
+			}
+
+			if (lastDay !== day) {
+				// New day: rebase so yesterday's tags clear.
+				lastVisit = String(now.getTime());
+				localStorage.setItem(visitKey, lastVisit);
+				localStorage.setItem(dayKey, day);
+			}
+
+			var teasers = document.querySelectorAll('.post-teaser');
+			for (var i = 0; i < teasers.length; i++) {
+				var date = parseInt(teasers[i].getAttribute('data-date'), 10);
+				if (!isNaN(date) && date > parseInt(lastVisit, 10)) {
+					var star = document.createElement('span');
+					star.className = 'new-star';
+					star.textContent = 'NEW';
+					teasers[i].querySelector('.title').appendChild(star);
+				}
+			}
+		} catch (e) {
+			// localStorage unavailable (private mode etc.): no badges.
+		}
+	};
+
+	newStar();
+
 });
 
 
