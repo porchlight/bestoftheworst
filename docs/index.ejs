@@ -13,7 +13,7 @@
         %>
         <% for (const date of Object.keys(sortable).sort().reverse().slice(0, 20)) { const {name, title, body, author, tags, slug} = sortable[date]; -%>
             <% const formatted_date = new Date(parseInt(date)); %>
-            <div class="post-teaser">
+            <div class="post-teaser" data-date="<%= date %>">
                 <span class="title"><a href="posts/<%= slug %>.html"><%= title %></a></span>
                  <div class="date"><%= formatted_date.toLocaleString('default', { year: 'numeric', month: 'long', day: 'numeric', hour12: true, hour: 'numeric', minute: '2-digit' }) %></div>
                 <div class="taglist">
