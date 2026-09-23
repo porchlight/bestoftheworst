@@ -312,31 +312,6 @@ input[type='submit'] {
     margin-right: auto;
 }
 
-.about-prev,
-.about-next {
-    position: absolute;
-    top: 45%;
-    background: #fff;
-    border: 1px solid #333;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    line-height: 1;
-    padding: 0.5rem 0.75rem;
-}
-
-.about-prev {
-    left: 0.25rem;
-}
-
-.about-next {
-    right: 0.25rem;
-}
-
-.about-count {
-    margin-top: 0.5rem;
-    color: #666;
-    font-size: 1.4rem;
-}
 
 .about-caption {
     font-style: italic;

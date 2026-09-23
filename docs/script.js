@@ -68,8 +68,8 @@ window.addEventListener('load', () => {
 
 	newStar();
 
-	// About page photo slider (random start, wraps in both directions).
-	var initAboutSlider = function () {
+	// About page photo: one random photo on every load.
+	var initAboutPhoto = function () {
 		var listEl = document.getElementById('about-photos');
 		if (!listEl) return; // Not the About page: no-op.
 
@@ -85,28 +85,11 @@ window.addEventListener('load', () => {
 		if (!img) return; // No photo element: no-op.
 
 		var base = img.getAttribute('data-base') || '';
-		var count = document.getElementById('about-count');
-
-		var show = function (i) {
-			img.src = base + names[i];
-			if (count) count.textContent = (i + 1) + ' / ' + names.length;
-		};
-
 		var index = Math.floor(Math.random() * names.length);
-		show(index);
-
-		var step = function (delta) {
-			index = (index + delta + names.length) % names.lengthending;
-			show(index);
-		};
-
-		var prev = document.querySelector('.about-prev');
-		if (prev) prev.addEventListener('click', function () { step(-1); });
-		var next = document.querySelector('.about-next');
-		if (next) next.addEventListener('click', function () { step(1); });
+		img.src = base + names[index];
 	};
 
-	initAboutSlider();
+	initAboutPhoto();
 
 });
 
