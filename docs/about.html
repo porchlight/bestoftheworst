@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>
         
-            ** SITE UPDATE ** | best of the worst
+            About | best of the worst
                     
     </title>
     <meta charset="utf-8">
     <meta name="description" content="best of the worst">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/jpg" href="../favicon.png" />
+    <link rel="shortcut icon" type="image/jpg" href="./favicon.png" />
     <!-- Embed Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +23,10 @@
 
     <!-- Milligram CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
-    <link rel="stylesheet" href="../index.css">
-    <script src="../script.js"></script>
+    <link rel="stylesheet" href="./index.css">
+    <script src="./script.js"></script>
 
-    <link rel="alternate" type="application/rss+xml" href="rss.xml" title="../best of the worst RSS">
+    <link rel="alternate" type="application/rss+xml" href="rss.xml" title="./best of the worst RSS">
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VQ3HKYN8XV"></script>
@@ -40,57 +41,60 @@
 
 <body>
     <nav class="responsive" id="responsive-menu">
-        <a href="../">Home</a>
-        <a href="../archive.html">Archive</a>
-        <a href="../suggest.html">Make a suggestion</a>
-        <a href="../about.html">About</a>
+        <a href="./">Home</a>
+        <a href="./archive.html">Archive</a>
+        <a href="./suggest.html">Make a suggestion</a>
+        <a href="./about.html">About</a>
         <button class="menu-toggle">...</button>
     </nav>
     <main class="wrapper">
         <section class="container">
             <div class="row">
                 <div class="column">
-                    <h1><a href="../">best of the worst</a></h1>
+                    <h1><a href="./">best of the worst</a></h1>
                 </div>
-            </div>
-<div class="row post">
+            </div><div class="row">
     <div class="column column-67 body">
-		<h2>** SITE UPDATE **</h2>
-		<div class="taglist">
-        	<span>travis</span><span class="seperator">|</span>
-            
-                    <ul>
-                        <li><a class="tag-select" href="/music.html">music</a></li>
-                    </ul>
-            
-            <span class="seperator">|</span>
-            <a href="#comments">comments</a>
-        </div>
-        <p><em>Posted on April 20, 2023 10:41 AM</em></p>
-		<p>I don&#39;t want to pay for the nosebleeds.ca domain anymore and it&#39;s expiring in a day or two, update your bookmarks to <a href="https://porchlight.github.io/bestoftheworst">https://porchlight.github.io/bestoftheworst</a> to keep following</p>
+        <h2>About</h2>
 
-		<div id="comments">
-            <h2>Comments</h2>
+        <div class="about-slider">
+            <img id="about-photo" data-base="./images/about/" alt="An old photo of me">
+            <button class="about-prev" aria-label="Previous photo">&#8592;</button>
+            <button class="about-next" aria-label="Next photo">&#8594;</button>
+            <div class="about-count" id="about-count"></div>
         </div>
-		<script>
-			window.rpc_host = 'https://rpc.dyuproject.com';
-			window.comments_max_depth = 10; // max: 127
-			window.comments_collapse_depth = 7; // the depth where comments get collapsed by default
-		</script>
-		<script src="https://netlify-comments.dyuproject.com/dist/build.js"></script>
-		<link rel="stylesheet" href="https://netlify-comments.dyuproject.com/dist/build.css" />
-	</div>
-	<div class="column column-33 menu">
+
+        <p class="about-caption">This is me. Want to know how much I weigh? Pick me up.</p>
+
+        <p class="about-github"><a href="https://github.com/porchlight" target="_blank" rel="noopener">Find me on GitHub</a></p>
+
+        <script type="application/json" id="about-photos">[
+            "7a5bb24a-688f-4e02-a77f-5c1167cd3efe.JPG",
+            "IMG_0020.jpg",
+            "IMG_0490.PNG",
+            "IMG_0491.PNG",
+            "IMG_0492.PNG",
+            "IMG_0493.PNG",
+            "IMG_1373.jpg",
+            "IMG_1586.jpeg",
+            "IMG_5251.PNG",
+            "IMG_5252.JPG",
+            "IMG_5421.PNG",
+            "IMG_5422.JPG"
+        ]</script>
+    </div>
+    <div class="column column-33 menu">
     <nav>
         <ul>
-            <li><a href="../">Home</a></li>
-            <li><a href="../archive.html">Archive</a></li>
-            <li><a href="../suggest.html">Make a suggestion</a></li>
-            <li><a href="../about.html">About the author</a></li>
+            <li><a href="./">Home</a></li>
+            <li><a href="./archive.html">Archive</a></li>
+            <li><a href="./suggest.html">Make a suggestion</a></li>
+            <li><a href="./about.html">About the author</a></li>
         </ul>
     </nav>
 </div>
 </div>
+
 <footer class="row footer">
 	<div class="column">
 		<hr>
